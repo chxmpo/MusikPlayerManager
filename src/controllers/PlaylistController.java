@@ -84,7 +84,6 @@ public class PlaylistController {
         var tableModel = frame.getpPanel().getModel();
         tableModel.setRowCount(0);
         for (Song s : model.getSongs()) {
-            System.out.println(s);
             tableModel.addRow(new Object[]{s.getTitle(), s.getArtist()});
         }
     }
