@@ -54,7 +54,9 @@ public class PlaylistController {
         if (dialog.isConfirmed()) {
             String title = dialog.getTitleInput();
             String artist = dialog.getArtistInput();
+
             if (!title.isEmpty() && !artist.isEmpty()) {
+                Song s = new Song(title, artist);
                 model.addSong(new Song(title, artist));
                 refreshTable();
             } else {
@@ -82,6 +84,7 @@ public class PlaylistController {
         var tableModel = frame.getpPanel().getModel();
         tableModel.setRowCount(0);
         for (Song s : model.getSongs()) {
+            System.out.println(s);
             tableModel.addRow(new Object[]{s.getTitle(), s.getArtist()});
         }
     }

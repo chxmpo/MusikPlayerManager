@@ -68,9 +68,15 @@ public class SongDialog extends JDialog {
         add(btnOK);
         add(btnCancel);
 
+        // Wenn OK gedrückt wurde:
         btnOK.addActionListener(e -> {
+            // Erst prüfen, ob Felder leer sind
+            if (txtTitle.getText().trim().isEmpty() || txtArtist.getText().trim().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Bitte beide Felder ausfüllen!");
+                return;
+            }
             confirmed = true;
-            setVisible(false);
+            setVisible(false); // Dialog schließen
         });
         btnCancel.addActionListener(e -> setVisible(false));
     }

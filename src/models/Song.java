@@ -1,6 +1,8 @@
 package models;
 
-public class Song {
+import java.io.Serializable;
+
+public class Song implements Serializable {
     private String title;
     private String artist;
 
@@ -24,7 +26,8 @@ public class Song {
 
 
     public Song(String title, String artist) {
-
+        this.setTitle(title);
+        this.setArtist(artist);
     }
 
     public Song(){
