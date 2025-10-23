@@ -14,8 +14,8 @@ public class PlaylistModel {
         this.songs = songs;
     }
 
-    public PlaylistModel(ArrayList<Song> songs) {
-        this.songs = songs;
+    public PlaylistModel() {
+
     }
 
     //neuen Song adden
@@ -32,7 +32,7 @@ public class PlaylistModel {
 
     //Song und Artist in die Datei einlesen
     public void saveToFile(String filename){
-        try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("SongSpeichern.txt"))) {
+        try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("SongSpeichern.dat"))) {
             out.writeObject(songs);
         } catch (IOException e){
             e.printStackTrace();
@@ -40,7 +40,7 @@ public class PlaylistModel {
     }
 
     public void loadFromFile(String filename) {
-        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("SongSpeichern.txt"))) {
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("SongSpeichern.dat"))) {
             songs = (ArrayList<Song>) in.readObject();
         } catch (Exception e) {
             System.out.println("Keine gespeicherte Datei gefunden - neue Playlist wird erstellt.");

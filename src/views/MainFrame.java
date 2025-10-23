@@ -6,6 +6,8 @@ public class MainFrame extends JFrame {
 
     private PlaylistPanel pPanel;
 
+
+
     public PlaylistPanel getpPanel() {
         return pPanel;
     }
