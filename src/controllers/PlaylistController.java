@@ -46,7 +46,7 @@ public class PlaylistController {
 
         frame.setVisible(true);
     }
-
+    //Song adden, falls nicht beide Felder ausgefüllt werden kommt eine message
     private void addSong(ActionEvent e) {
         SongDialog dialog = new SongDialog(frame);
         dialog.setVisible(true);
@@ -64,7 +64,7 @@ public class PlaylistController {
             }
         }
     }
-
+    //Funktion zum Löschen eines Songs, indem man ihn anklickt
     private void removeSong(ActionEvent e) {
         int row = frame.getpPanel().getTable().getSelectedRow();
         if (row != -1) {
@@ -74,12 +74,12 @@ public class PlaylistController {
             JOptionPane.showMessageDialog(frame, "Bitte einen Song auswählen!");
         }
     }
-
+    //Playlist wird in Songspeicher.dat gespeichert
     private void savePlaylist(ActionEvent e) {
         model.saveToFile(FILE_NAME);
         JOptionPane.showMessageDialog(frame, "Playlist gespeichert!");
     }
-
+    //refreshed nachdem ein Song eingefügt wurde damit er angezeigt wird
     private void refreshTable() {
         var tableModel = frame.getpPanel().getModel();
         tableModel.setRowCount(0);

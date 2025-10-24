@@ -23,7 +23,7 @@ public class MainFrame extends JFrame {
          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          setLocationRelativeTo(null);
 
-        // Hintergrund leicht grau, damit's chillig aussieht
+        // Hintergrund leicht grau (habs versucht)
         getContentPane().setBackground(new Color(245, 245, 245));
 
         // Coole Schrift

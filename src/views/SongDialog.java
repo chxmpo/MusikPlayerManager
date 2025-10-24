@@ -76,7 +76,7 @@ public class SongDialog extends JDialog {
                 return;
             }
             confirmed = true;
-            setVisible(false); // Dialog schließen
+            setVisible(false);
         });
         btnCancel.addActionListener(e -> setVisible(false));
     }

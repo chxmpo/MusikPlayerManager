@@ -18,7 +18,7 @@ public class PlaylistModel {
 
     }
 
-    //neuen Song adden
+    //neuen Song adden in Arraylist
     public void addSong(Song s){
         songs.add(s);
     }
@@ -38,7 +38,7 @@ public class PlaylistModel {
             e.printStackTrace();
         }
     }
-
+    //Datei wird ausgelesen und zu einer ArrayList gemacht
     public void loadFromFile(String filename) {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("SongSpeichern.dat"))) {
             songs = (ArrayList<Song>) in.readObject();
