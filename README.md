@@ -19,7 +19,7 @@ Version: 1.0
 - Löschen von Songs
 - Anzeige aller Songs in einer übersichtlichen Tabelle
 - Speicherung und Laden der Playlist aus einer Datei
-- Benutzerfreundliche grafische Oberfläche mit modernem Design (FlatLaf)
+- Benutzerfreundliche grafische Oberfläche mit modernem Design
 - Saubere Trennung zwischen Model, View und Controller (MVC)
 
 ---
@@ -27,11 +27,14 @@ Version: 1.0
 ## Benutzeroberfläche
 
 Das Hauptfenster besteht aus:
-einer Tabelle mit Songs (Titel und Künstler)
-drei Buttons:
-Song hinzufügen – öffnet ein Dialogfenster für die Eingabe
-Song löschen – entfernt den ausgewählten Song
-Speichern - Playlist wird in eine Datei namens Songspeichern.dat gespeichert
+1. einer Tabelle mit Songs (Titel und Künstler)
+2. drei Buttons:  
+Song hinzufügen – öffnet ein Dialogfenster für die Eingabe  
+Song löschen – entfernt den ausgewählten Song  
+Speichern - Playlist wird in eine Datei namens Songspeichern.dat gespeichert  
+Sortieren - entweder auf Titel oder Autor klicken um zu sortieren:  
+ein Klick -> alphabetisch aufwärts 
+zwei Klicks -> alphabetisch abwärts
 
 ---
 
@@ -44,3 +47,15 @@ Speichern - Playlist wird in eine Datei namens Songspeichern.dat gespeichert
 5. Song anklicken und "Song löschen" klicken um ihn zu entfernen
 6. Wenn alle Songs eingefügt, dann Speichern klicken und die Playlist ist gespeichert
 
+--- 
+
+## Beispiel
+1. Klick Song hinzufügen
+2. Eingabe Song: Thunder
+3. Eingabe Artist: Imagine Dragons
+4. Klick Ok -> Song erscheint mit Artist
+5. Klick auf Titel -> sortiert alphabetisch
+6. Klick auf Song und Artist und Song Löschen -> Song wird gelöscht und aus der Tabelle genommen
+7. Klick Song hizufügen 
+8. Eingeben der Daten
+9. Speichern -> beim nächsten Starten wird dir dieser Song wieder angezeigt

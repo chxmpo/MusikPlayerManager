@@ -3,8 +3,10 @@ package views;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import javax.swing.table.TableRowSorter;
 
-public class PlaylistPanel extends JLabel {
+
+public class PlaylistPanel extends JPanel {
     private JTable table;
     private DefaultTableModel model;
     private JButton btnAdd, btnRemove, btnSave;  //mehrere gleichzeitig damit weniger code
@@ -57,6 +59,10 @@ public class PlaylistPanel extends JLabel {
         model = new DefaultTableModel(new Object[]{"Titel", "Künstler"}, 0);
         table = new JTable(model);
         add(new JScrollPane(table), BorderLayout.CENTER);
+
+        //Sortierfunktion
+        TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
+        table.setRowSorter(sorter);
 
         //Button Layout
         JPanel buttonPanel = new JPanel();
