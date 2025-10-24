@@ -5,6 +5,12 @@ Die Anwendung wurde mit **Java Swing** entwickelt und folgt dem **MVC-Architektu
 
 ---
 
+## GitHub
+
+[Link zum Projekt](https://github.com/chxmpo/MusikPlayerManager)
+
+---
+
 ## Entwicklerinformationen
 
 Projektname: Musik-Playlist-Manager
